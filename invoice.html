@@ -1,0 +1,778 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+          @media print {
+            body {
+              height: 29.7cm;
+              margin: 0 auto;
+              zoom: .48
+            }
+          }
+
+          body {
+            font-family: 'Arial', sans-serif;
+          }
+
+          img {
+            max-width: 100%;
+          }
+
+          table,
+          th,
+          td {
+            border-collapse: collapse;
+          }
+
+          *,
+          ::after,
+          ::before {
+            box-sizing: border-box
+          }
+
+          b,
+          strong {
+            font-weight: bolder
+          }
+
+          h4 {
+            font-size: 24px
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            margin-bottom: 8px;
+            font-weight: 500;
+            line-height: 1.2
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            margin-top: 0;
+            margin-bottom: 8px
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 16px
+          }
+
+          address {
+            margin-bottom: 16px;
+            font-style: normal;
+            line-height: inherit
+          }
+
+          img {
+            vertical-align: middle;
+            border-style: none
+          }
+
+          .Hdata p {
+            width: 50%
+          }
+
+          table {
+            width: 100%;
+            margin: auto;
+          }
+
+          .table th {
+            border: 2px solid #000
+          }
+
+          td.left-templateColumnContainer {
+            font-size: 36px;
+            font-weight: 600;
+          }
+
+          td.center-templateColumnContainer img {
+            width: 80%;
+          }
+
+          td.right-templateColumnContainer p {
+            line-height: 18px;
+            margin: 0;
+            font-size: 12px;
+            font-weight: 500;
+          }
+
+          td.right-templateColumnContainer h2 {
+            font-weight: 700;
+            padding-top: 30px;
+          }
+
+          td.right-templateColumnContainer h3 {
+            font-weight: 700;
+            margin: 0;
+            font-size: 13px;
+          }
+
+          td.right-templateColumnContainer span {
+            width: 50%;
+            float: left;
+            margin-top: 4px;
+          }
+
+          th.ships-from {
+            background: #000;
+            color: #fff;
+          }
+
+          th.ships-from p {
+            margin: 0;
+          }
+
+          tr.company-col span {
+            float: right;
+          }
+
+          th.ships-from {
+            border: 3px solid #000;
+          ;
+            /*    border: none;*/
+            padding: 5px 20px 5px 15px;
+          }
+
+          tr.company-col p {
+            margin: 0;
+            color: #808080;
+            font-size: 18px;
+            margin-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          tr.company-col span {
+            color: #000000;
+          }
+
+          tr.company-col b {
+            color: #000000;
+            font-weight: 600;
+          }
+
+          span.arrow-img img {
+            width: 32px;
+            text-align: center;
+          }
+
+          span.arrow-img {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            z-index: 9999;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          table.ship-row {
+            position: relative;
+          }
+
+          table.special-row {
+            margin-top: 50px;
+          }
+
+          tr.company-col.dyna-col td {
+            border: none;
+          }
+
+          tr.company-col td {
+            border-right: 2px solid;
+          }
+
+          td.truck-col {
+            float: right;
+            width: 48%;
+            background: #000;
+            color: #fff;
+            border-radius: 20px 0 0 0;
+            margin: 0;
+            padding: 2px 10px 4px 16px;
+            box-sizing: border-box;
+            font-size: 14px;
+          }
+
+          td.truck-col span {
+            color: #fff;
+          }
+
+          table.driver-row {
+            margin-top: 30px;
+          }
+
+          td.col-01 p {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+          }
+
+          td.col-01 span {
+            float: right;
+          }
+
+          td.col-01 h4 {
+            color: #757575;
+            padding-left: 20px;
+            margin: 0;
+            font-size: 20px;
+          }
+
+          table.driver-row tr td {
+            width: 33%;
+          }
+
+          tr.driver-tr {
+            border-bottom: none;
+            border-color: #ffff;
+          }
+
+          td.homoola-col p {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+          }
+
+          td.homoola-col span {
+            float: right;
+          }
+
+          td.homoola-col h4 {
+            color: #757575;
+            padding-left: 20px;
+            margin: 0;
+            font-size: 20px;
+          }
+
+          td.col-01 {
+            border: 2px solid;
+          }
+
+          td.homoola-col.hoom p:first-child {
+            border-top: 2px solid;
+            padding: 7px 0 35px;
+          }
+
+          td.homoola-col.hoom {
+            padding: 0;
+          }
+
+          td.homoola-col.hoom p {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+          }
+
+          tr.map-row {
+            width: 50%;
+            float: left;
+          }
+
+          tr.map-content {
+            width: 50%;
+            float: right;
+          }
+
+          iframe {
+            width: 100%;
+          }
+
+          tr.map-col {}
+
+          tr.map-in {
+            border: 3px solid;
+          }
+
+          tr.map-col th {}
+
+          tr.map-in td {
+            margin: 0;
+            padding: 0;
+          }
+
+          table.map-row {
+            margin-top: 30px;
+            width: 100%;
+          }
+        </style>
+    </head>
+    <body>
+            <table border="0" cellpadding="10" cellspacing="0" style="margin-bottom: 10px;">
+                <tbody>
+                <tr>
+                    <td align="left" valign="bottom" width="33%" class="left-templateColumnContainer">
+                        {{ReceiptNo}}
+                    </td>
+                    <td align="center" valign="top" width="33%" class="center-templateColumnContainer">
+                        <img src="http://urtestsite.com:5960/images/waybill-logo.png" alt="">
+                    </td>
+                    <td align="left" valign="top" width="33%" class="right-templateColumnContainer" style="width: 430px;
+            float: right;">
+                        <h2 style="font-size: 16px;">HOMOOLA Contact Info:</h2>
+                        <h3>Address</h3>
+                        <p>{{HomoolaContactInfo.AddressLine1}}</p>
+                        <p>{{HomoolaContactInfo.AddressLine2}}</p>
+                        <p>{{HomoolaContactInfo.AddressLine3}}</p>
+                        <span>
+                      <h3>website</h3>
+                      <p>{{HomoolaContactInfo.Website}}</p>
+                    </span>
+                        <span>
+                      <h3>Email</h3>
+                      <p>{{HomoolaContactInfo.Email}}</p>
+                    </span>
+                        <span>
+                      <h3>CR Number</h3>
+                      <p>{{HomoolaContactInfo.CRNumber}}</p>
+                    </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="ship-row" border="0" cellpadding="10" cellspacing="0" style="border: 3px solid #000;">
+                <tbody>
+                <tr align="left">
+                    <th class="ships-from">
+                        <p style="text-align:left; float:left;">SHIPS FROM </p>
+                        <p style="text-align:right; margin-right: 33px;">{{ShipsFromInfo.ShipsFromTitle}} </p>
+                    </th>
+                    <th class="ships-from">
+                        <p style="text-align:left; float:left;">SHIPS TO </p>
+                        <p style="text-align: right; font-family: 'Noto Sans Arabic', sans-serif;font-weight:400;">
+                            {{ShipsToInfo.ShipsToTitle}}
+                        </p>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+            <table class="ship-row" border="0" cellpadding="10" cellspacing="0" style="border: 3px solid #000;">
+                <tbody>
+                <tr align="left" class="company-col">
+                    <td>
+                        <p><b>Company:</b> {{CompanyName.English}} <span style="text-align:right;">حلول أخذ العينات الكمومية </span></p>
+                        <p><b>Responsible party:</b> {{ResponsibleParty.English}} <span style="text-align:right;">{{ResponsibleParty.Arabic}}</span>
+                        </p>
+                        <p><b>Phone:</b> {{ShipsFromInfo.Phone}} <span style="text-align:right;">{{ShipsFromInfo.PhoneTitle}}</span></p>
+                        <p><b>Address:</b>{{Address.English}} <span style="text-align:right;">{{Address.Arabic}}</span></p>
+                        <span class="arrow-img"><img src="http://urtestsite.com:5960/images/arrow.png"></span>
+                    </td>
+                    <td>
+                        <p><b>Company:</b> {{CompanyName.English}}<span style="text-align:right;">{{CompanyName.Arabic}}</span>
+                        </p>
+                        <p><b>Responsible party:</b> {{ResponsibleParty.English}}<span style="text-align:right;">{{ResponsibleParty.Arabic}} </span>
+                        </p>
+                        <p><b>Phone:</b> {{ShipsToInfo.Phone}}<span style="text-align:right;">{{ShipsToInfo.PhoneTitle}}</span>
+                        </p>
+                        <p><b>Address:</b> {{Address.English}}
+                            &lt; <span style="text-align:right;">{{Address.Arabic}}</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 0;">
+                        <table class="" border="0" cellpadding="10" cellspacing="0" style="width: 380px;text-align: center;border: none;box-shadow: none;">
+                            <tbody>
+                            <tr>
+                                <th style="padding: 0;">
+                                    <p style="text-transform: uppercase;font-size: 18px;margin: 0;border: 3px solid #000;border-radius: 20px 20px 0 0;    border-bottom: none;background: white;padding: 9px 30px;">
+                                        Homoola</p>
+                                </th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table border="0" cellpadding="10" cellspacing="0">
+                <tbody>
+                <tr>
+                    <td style="padding: 0; text-align: center;">
+                        <p style="width: 380px; margin: 0;display: inline-block;background: #000;color: #fff;padding: 10px 30px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                            www.homoola.com <img src="http://urtestsite.com:5960/images/bar-code.png" style="width: 25px;margin-left: 30px;"></p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="special-row" border="2" cellpadding="10" cellspacing="0">
+                <tbody>
+                <tr align="left">
+                    <th class="ships-from">
+                        <p style="text-align:left; float:left;">SPECIAL INSTRUCTION </p>
+                    </th>
+                    <th class="ships-from">
+                        <p style="text-align:right;">تعليمات خاصة </p>
+                    </th>
+                </tr>
+                <tr align="left" class="company-col dyna-col">
+                    <td>
+                        <p><b>Truck Type :</b> {{TruckType.English}} <span style="text-align:right;"></span></p>
+                    </td>
+                    <td>{{TruckType.Arabic}}</td>
+                </tr>
+                <tr align="left" class="company-col dyna-col">
+                    <td>
+                        <p><b>Truck Size : </b> {{TruckSize.English}} </p>
+                    </td>
+                    <td>{{TruckSize.Arabic}}</td>
+                </tr>
+                <tr align="left" class="company-col dyna-col">
+                    <td></td>
+                    <td class="truck-col"> truck Illustration <span>{{SpecialInstructionInfo.TruckIllustration}} </span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="driver-row" border="0" cellpadding="10" cellspacing="0" style="border: 3px solid #000;">
+                <tbody>
+                <tr class="driver-tr">
+                    <td class="col-01">
+                        <p>DRIVER NAME <span>شاحنة </span></p>
+                        <h4> {{DriverInfo.DriverName}}</h4>
+                    </td>
+                    <td class="homoola-col" rowspan="1">
+                        <p>
+                            HOMOOLA Ref.#<span>شاحنة </span>
+                        </p>
+                        <h4 style="text-align: center;"> {{DriverInfo.HomoolaRefNo}}</h4>
+                    </td>
+
+                    <td class="col-01">
+                        <p>TRUCK LICENSE <span>شاحنة </span></p>
+                        <h4> {{DriverInfo.TruckLicense}}</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-01">
+                        <p>DRIVER PHONE NO. <span>شاحنة </span></p>
+                        <h4> {{DriverInfo.DriverPhoneNo}}</h4>
+                    </td>
+                    <td class="homoola-col hoom" rowspan="2">
+                        <p>SHIPPER Ref.#<span>شاحنة </span>
+                        </p>
+                        <p>
+                        </p>
+                    </td>
+                    <td class="col-01">
+                        <p>PREFERRED PICK-UP TIME <span>شاحنة </span></p>
+                        <h4> {{DriverInfo.PreferredPickUpDate}} From {{DriverInfo.PreferredPickUpFromTime}} To
+                            {{DriverInfo.PreferredPickUpToTime}}
+                        </h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-01">
+                        <p>DRIVER'S LICENSE# <span>شاحنة </span></p>
+                        <h4> 2449079587</h4>
+                    </td>
+                    <td class="col-01">
+                        <p>PREFERRED DROP-OFF TIME <span>شاحنة </span></p>
+                        <h4> {{DriverInfo.PreferredDropOffDate}} From {{DriverInfo.PreferredDropOffFromTime}} To
+                            {{DriverInfo.PreferredDropOffToTime}}
+                        </h4>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table border="0" cellpadding="10" cellspacing="0">
+                <tbody>
+                <tr>
+                    <td style="padding-left: 0; padding-top:0; width:50%; padding-bottom:0;">
+                        <table class="map-row" border="0" cellpadding="10" cellspacing="0">
+                            <tbody>
+                            <tr class="map-col">
+                                <th class="ships-from">
+                                    <p style="text-align:left; font-weight:300;">MAP <span style="float:right; font-weight:300;">شاحنة </span></p>
+                                </th>
+                            </tr>
+                            <tr class="map-in">
+                                <td>
+                                    <img alt="Map" height="450" src="{{MapInfo.MapImageURL}}">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="padding-right:0; padding-top: 0; width:50%; padding-bottom:0; vertical-align: top;">
+                        <table class="map-row" border="0" cellpadding="10" cellspacing="0">
+                            <tbody>
+                            <tr class="map-col">
+                                <th class="ships-from">
+                                    <p style="text-align:left; font-weight:300; text-transform:uppercase;">
+                                        Payment Method <span style="float:right; font-weight:300;">شاحنة </span></p>
+                                </th>
+                            </tr>
+                            <tr class="payment-text" style="border: 3px solid #000;">
+                                <td>
+                                    Credit
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="map-row" border="0" cellpadding="10" cellspacing="0" style="margin-top: 0;">
+                            <tbody>
+                            <tr class="map-col">
+                                <th class="ships-from">
+                                    <p style="text-align:left; font-weight:300; text-transform:uppercase;">
+                                        Payment Terms <span style="float:right; font-weight:300;">شاحنة </span></p>
+                                </th>
+                            </tr>
+                            <tr class="payment-text" style="border: 3px solid #000;">
+                                <td style="height: 100px;">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="map-row" border="0" cellpadding="10" cellspacing="0">
+                            <tbody>
+                            <tr class="map-col">
+                                <th class="ships-from">
+                                    <p style="text-align:left; font-weight:300; text-transform:uppercase;">
+                                        Other information <span style="float:right; font-weight:300;">شاحنة </span></p>
+                                </th>
+                            </tr>
+                            <tr class="payment-text" style="border: 3px solid #000;">
+                                <td style="height: 205px; vertical-align: top;">
+                                    Other
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <table cellpadding="10" cellspacing="0" style="margin-top:30px; border: 3px solid #000;">
+                <tbody>
+                <tr>
+                    <th class="ships-from" style="width:50%;">
+                        <p style="text-align:left; font-weight:300; text-transform:uppercase;">Signature and Date </p>
+                    </th>
+                    <th class="ships-from" style="width:50%;">
+                        <p style="text-align:right; font-weight:300;">المرسل </p>
+                    </th>
+                </tr>
+                <tr align="left">
+                    <td style="padding: 0;" colspan="2">
+                        <table cellpadding="10" cellspacing="0" border="0">
+
+                            <tbody>
+                            <tr>
+                                <td style="border-right: 3px solid #000; padding: 0; width: 398px;">
+                                    <table style="width:100%;" cellpadding="10" cellspacing="0">
+                                        <tbody>
+                                        <tr style="width: 100%;">
+                                            <td style="float:left; width: 50%;">
+                                                <p style="text-align:left; font-weight:500; text-transform:uppercase; margin-bottom:0;">
+                                                    Shipper</p>
+                                            </td>
+                                            <td style="float:left; width: 50%;">
+                                                <p style="text-align:right; font-weight:500; margin-bottom:0; margin-right: 15px;">
+                                                    الشاحن</p>
+                                            </td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="width:50%; float:left; border-right: 2px solid #000;">
+                                                <p style="font-size: 12px; margin: 0; padding-right: 10px;">I hereby acknowledge that the
+                                                    transported products have been inspected in a legitimate manner and have received and
+                                                    delivered all the relevant documents</p>
+                                            </td>
+                                            <td style="width:50%; float:left;">
+                                                <p style="font-size: 12px; margin: 0; padding-left: 10px;">
+                                                    أقر بموجب هذا بأن المنتجات المنقولة قد تم فحصها بطريقة مشروعة واستلمت وسلمت جميع
+                                                    المستندات ذات الصلة
+
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="height: 83px;"></td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="width: 100%;">
+                                                <table style="width: 100%;" cellpadding="10" cellspacing="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding: 0;">
+                                                            <form style="margin: 0px 0 20px; width: 97%;display: inline-block;">
+                                                                <div style="width: 100%; border: 3px solid #000;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">NAME</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px; width: 100%;">
+                                                                </div>
+                                                                <div style="width: 68%; float: left; border: 3px solid #000; margin-top: 10px; margin-right: 5px;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">Signature</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px; width: 100%;">
+                                                                </div>
+                                                                <div style="width: 29%; float: left; border: 3px solid #000; margin-top: 10px; margin-left: 5px;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">Date</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px; width: 100%;">
+                                                                </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td style="border-right: 3px solid #000; padding: 0; width: 398px;">
+                                    <table style="width:100%;" cellpadding="10" cellspacing="0">
+                                        <tbody>
+                                        <tr style="width: 100%;">
+                                            <td style="float:left; width: 50%;">
+                                                <p style="text-align:left; font-weight:500; text-transform:uppercase; margin-bottom:0;">
+                                                    Driver</p>
+                                            </td>
+                                            <td style="float:left; width: 50%;">
+                                                <p style="text-align:right; font-weight:500; margin-bottom:0; margin-right: 15px;">سائق</p>
+                                            </td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="width:50%; float:left; border-right: 2px solid #000;">
+                                                <p style="font-size: 12px; margin: 0; padding-right: 10px;">I hereby acknowledge that the
+                                                    transported products have been inspected in a legitimate manner and have received and
+                                                    delivered all the relevant documents</p>
+                                            </td>
+                                            <td style="width:50%; float:left;">
+                                                <p style="font-size: 12px; margin: 0; padding-left: 10px;">
+                                                    أقر بموجب هذا بأن المنتجات المنقولة قد تم فحصها بطريقة مشروعة واستلمت وسلمت جميع
+                                                    المستندات ذات الصلة
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="text-align: center;">
+                                                <img src="http://urtestsite.com:5960/images/cmpy-logo.png" style="width: 150px;">
+                                            </td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="width: 100%;">
+                                                <table style="width: 100%;" cellpadding="10" cellspacing="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding: 0;">
+                                                            <form style="margin: 0px 0 20px; width: 97%;display: inline-block;">
+                                                                <div style="width: 100%; border: 3px solid #000;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">NAME</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px;width: 100%;">
+                                                                </div>
+                                                                <div style="width: 68%; float: left; border: 3px solid #000; margin-top: 10px; margin-right: 5px;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">Signature</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px;width: 100%;">
+                                                                </div>
+                                                                <div style="width: 29%; float: left; border: 3px solid #000; margin-top: 10px; margin-left: 5px;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">Date</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px;width: 100%;">
+                                                                </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td style="padding: 0; width: 398px;">
+                                    <table style="width:100%;" cellpadding="10" cellspacing="0">
+                                        <tbody>
+                                        <tr style="width: 100%;">
+                                            <td style="float:left; width: 50%;">
+                                                <p style="text-align:left; font-weight:500; text-transform:uppercase; margin-bottom:0;">
+                                                    Consignee</p>
+                                            </td>
+                                            <td style="float:left; width: 50%;">
+                                                <p style="text-align:right; font-weight:500; margin-bottom:0; margin-right: 15px;">المرسل
+                                                    إليه</p>
+                                            </td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="width:50%; float:left; border-right: 2px solid #000;">
+                                                <p style="font-size: 12px; margin: 0; padding-right: 10px;">I hereby acknowledge that the
+                                                    transported products have been inspected in a legitimate manner and have received and
+                                                    delivered all the relevant documents</p>
+                                            </td>
+                                            <td style="width:50%; float:left;">
+                                                <p style="font-size: 12px; margin: 0; padding-left: 10px;">
+                                                    أقر بموجب هذا بأن المنتجات المنقولة قد تم فحصها بطريقة مشروعة واستلمت وسلمت جميع
+                                                    المستندات ذات الصلة
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="height: 83px;"></td>
+                                        </tr>
+                                        <tr style="width: 100%;">
+                                            <td style="width: 100%;">
+                                                <table style="width: 100%;" cellpadding="10" cellspacing="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding: 0;">
+                                                            <form style="margin: 0px 0 20px; width: 97%; display: inline-block;">
+                                                                <div style="width: 100%; border: 3px solid #000;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">NAME</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px;width: 100%;">
+                                                                </div>
+                                                                <div style="width: 68%; float: left; border: 3px solid #000; margin-top: 10px; margin-right: 5px;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">Signature</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px;width: 100%;">
+                                                                </div>
+                                                                <div style="width: 29%; float: left; border: 3px solid #000; margin-top: 10px; margin-left: 5px;">
+                                                                    <label style="width: 100%; display: inline-block; padding: 5px 10px 0;"><span style="text-align: left; width: 50%; text-transform: uppercase; font-size: 12px; float: left;">Date</span>
+                                                                        <span style="text-align: right; width:50%; font-size: 12px; float: left;">المرسل</span></label>
+                                                                    <input type="text" name="" value="" style="border: 0;padding: 0 10px 5px;width: 100%;">
+                                                                </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table cellpadding="10" cellspacing="0" border="0" style="border: 3px solid #000; margin-top: 30px; text-align: center; font-size: 13px; font-weight: 500;">
+                            <tbody>
+                            <tr style="border-bottom: 3px solid #000;">
+                                <td>
+                                    www.homoola.com/Terms &amp; Conditions
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    This agreement shall be governed by the terms and conditions of homoola.com and can be found at the
+                                    following link www.homoola.com/Terms &amp; Conditions
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    </body>
+</html>
